@@ -1,0 +1,11 @@
+<p>dashboard works!</p>
+<div class="cards-container">
+  <ng-container *ngIf="cars$ | async as cars">
+    <app-car-card
+      *ngFor="let car of cars"
+      [brand]="car.brand"
+      [model]="car.model"
+      [imgSrc]="car.imgSrc"
+    ></app-car-card>
+  </ng-container>
+</div>
